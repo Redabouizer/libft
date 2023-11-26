@@ -6,21 +6,15 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 02:21:26 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/12 02:21:28 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/11/26 16:38:56 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        c += 32;
-    return (c);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }
-/*
-int main(){
-    printf("%d", ft_tolower('A'));
-    return 0;
-}
-*/

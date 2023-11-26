@@ -12,18 +12,7 @@
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0 ,n);
+	ft_memset(s, 0, n);
 }
-/*
-int main (){
-    char d1[] ="hello World";
-    char d2[] ="hello World";
-    ft_bzero( &d1 , 4);
-    printf("%s\n", d1);
-    bzero( &d2 , 4);
-    printf("%s\n", d2);
-    return 0;
-}
-*/
