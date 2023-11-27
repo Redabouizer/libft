@@ -32,10 +32,10 @@ static size_t	cout_digit(long nb)
 
 char	*ft_itoa(int n)
 {
-	size_t	cout;
-	int		i;
-	char	*str;
-	long int nb;
+	size_t		cout;
+	int			i;
+	char		*str;
+	long int	nb;
 
 	i = 0;
 	nb = n;
