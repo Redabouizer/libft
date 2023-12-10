@@ -1,6 +1,15 @@
-PURPLE = \033[1;35m
-RED = \033[1;31m
-NONE = \033[0m
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/12/10 17:11:58 by rbouizer          #+#    #+#              #
+#    Updated: 2023/12/11 00:14:11 by rbouizer         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 
 SRCS = ft_atoi.c \
 	   ft_bzero.c \
@@ -54,32 +63,29 @@ OBJS = ${SRCS:.c=.o}
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-AR = ar crs
-ECHO = echo
+AR = ar cr
+
 RM = rm -f
 
 NAME = libft.a
 
-%.o: %.c libft.h
-	@$(CC) $(CFLAGS) -c $^ 
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $^
-	@$(ECHO) "\n\t$(PURPLE)the library has been created$(NONE)\n"
 
-all: $(NAME)
+%.o: %.c libft.h
+	@$(CC) $(CFLAGS) -c $^ 
 
 bonus: $(OBJS_B)
 	@$(AR) $(NAME) $^
-	@$(ECHO) "\n\t$(PURPLE)the bonus has been added$(NONE)\n"
 
 clean:
 	@$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(ECHO) "\n\t$(RED)everything has been removed$(NONE)\n"
 
-re: fclean all
+re: fclean all bonus
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 02:22:09 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 13:50:25 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/10 16:56:46 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	if (dst == src)
 		return (dst);
+	if (!dst && !src)
+		return (NULL);
 	while (i < n)
 	{
-		*(char *)(dst + i) = *(char *)(src + i);
+		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 		i++;
 	}
 	return (dst);

@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:00:08 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 20:10:17 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/10 02:48:48 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_list{
+typedef struct s_list
+{
 	void			*content;
 	struct s_list	*next;
 }	t_list;

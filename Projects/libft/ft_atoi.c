@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 21:42:59 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 13:00:07 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/11 00:17:27 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,29 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	k;
-	size_t	res;
+	int long	r;
+	int			s;
 
-	i = 0;
-	k = 1;
-	res = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	r = 0;
+	s = 1;
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
-			k *= -1;
-		i++;
+		s = 1 - 2 * (*str == '-');
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str && *str >= '0' && *str <= '9')
 	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
+		if (r > 922337203685477580 
+			|| (r == 922337203685477580 && *str - '0' > 7))
+		{
+			if (s == 1)
+				return (-1);
+			return (0);
+		}
+		r = r * 10 + (*str - 48);
+		str++;
 	}
-	return (k * res);
+	return (r * s);
 }

@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 14:53:42 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 12:52:01 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/10 17:16:08 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*p;
+	void	*p;
 
+	if (count && size && count > (4294967295 / size))
+		return (NULL);
 	p = malloc(count * size);
 	if (!p)
 		return (NULL);

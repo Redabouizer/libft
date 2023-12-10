@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:22:27 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 15:57:09 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/10 17:15:54 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ static char	**set_mem(char **tab, char const *s, char c)
 	i = 0;
 	while (*s)
 	{
-		while (*s == c)
+		while (*s && *s == c)
 			s++;
-		len = 0;
 		if (*s)
 		{
+			len = 0;
 			while (s[len] && s[len] != c)
 				len++;
 			tab[i] = malloc(sizeof(char) * (len + 1));
@@ -68,6 +68,8 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 	char	**str;
 
+	if (!s)
+		return (NULL);
 	count = count_words(s, c);
 	str = malloc(sizeof(char *) * (count + 1));
 	if (str == NULL)
