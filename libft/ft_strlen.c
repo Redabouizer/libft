@@ -6,13 +6,13 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 02:21:01 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 16:22:58 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/24 14:22:56 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

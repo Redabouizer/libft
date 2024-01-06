@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 03:57:04 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/12/16 22:54:21 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/25 05:54:23 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+// int main(){
+// 	printf("%s \n", ft_memchr("hello world", 't', 14));
+// }

@@ -6,7 +6,7 @@
 #    By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/10 17:11:58 by rbouizer          #+#    #+#              #
-#    Updated: 2023/12/17 18:29:24 by rbouizer         ###   ########.fr        #
+#    Updated: 2023/12/24 14:28:33 by rbouizer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,4 +88,4 @@ fclean: clean
 	
 re: fclean all bonus
 
-.PHONY: all clean fclean re
+.PHONY: clean

@@ -6,36 +6,26 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 05:10:37 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/12/16 22:55:36 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/25 06:04:14 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*dstt;
-	char	*srcc;
-
-	srcc = (char *)src;
-	dstt = (char *)dst;
-	if (srcc == NULL && dstt == NULL)
-		return (0);
-	if (dstt > srcc)
-	{
-		while (n > 0)
-		{
-			dstt[n - 1] = srcc[n - 1];
-			n--;
-		}
-	}
+	if (dst == src)
+		return (dst);
+	if (!dst && !src)
+		return (NULL);
+	if (dst < src)
+		ft_memcpy(dst, src, len);
 	else
-	{
-		while (n > 0)
-		{
-			*dstt++ = *srcc++;
-			n--;
-		}
-	}
+		while (len--)
+			*(unsigned char *)(dst + len) = *(unsigned char *)(src + len);
 	return (dst);
 }
+// int main(){
+// 	char s[10]="123456789";
+// 	printf("%s \n", ft_memmove(s+3, s, 3));
+// }

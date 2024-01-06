@@ -6,7 +6,7 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 21:43:07 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/12 14:49:36 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/25 05:51:12 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
+// int main ()
+// {
+// 	char str[] = "str";
+// 	ft_bzero(str,2);
+// 	printf("%c", str[0]);
+// }

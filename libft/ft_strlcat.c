@@ -6,13 +6,13 @@
 /*   By: rbouizer <rbouizer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 02:20:50 by rbouizer          #+#    #+#             */
-/*   Updated: 2023/11/26 11:54:09 by rbouizer         ###   ########.fr       */
+/*   Updated: 2023/12/24 14:20:41 by rbouizer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	src_len;
